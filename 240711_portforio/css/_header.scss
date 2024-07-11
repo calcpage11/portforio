@@ -1,0 +1,41 @@
+header {
+  #header {
+    @include base-block($top: 0px,$blanklr: 0px);
+    background-color: #FFFFFF;
+
+    .header {
+      &-contents {
+        display: flex;
+        justify-content: space-between;
+        &-left {
+          position: relative;
+          width: 50%;
+          height: auto;
+        }
+        &-right {
+          position: relative;
+          width: 50%;
+          height: auto;
+          &-nav {
+            display: flex;
+            justify-content: space-between;
+            a {
+              color: $text-color;  
+              font-size: $text-size;
+            }
+          }
+        }
+      }
+    }
+
+    .header-slider {
+      &-slide {
+        img {
+          width: 100%;
+          height: 550px;
+        }      
+      }
+    }
+
+  }
+}

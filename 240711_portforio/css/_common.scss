@@ -1,0 +1,21 @@
+body {
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto 0 auto;
+
+  hr{
+    @include base-hr;
+  }
+
+  h2 {
+    @include base-h2;
+  }
+
+  h3 {
+    @include base-h3;
+  }
+
+  p,li {
+    @include base-p;
+  }
+}

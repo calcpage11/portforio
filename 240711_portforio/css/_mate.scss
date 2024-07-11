@@ -1,0 +1,74 @@
+$text-color: rgba(107,62,50);
+$back-color: rgba(95,158,160,0.30);
+$icon-color: rgba(95,158,160);
+$gray-color: gray;
+$text-size: 26px;
+
+@mixin base-block($top: 200px,$blanklr: 50px) {
+  background-color: $back-color;
+  margin-top: $top;
+  padding-top: 50px;
+  padding-left: $blanklr;
+  padding-right: $blanklr;
+}
+
+@mixin base-hr {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: $text-color;
+}
+
+@mixin base-h2 {
+  font-size: 80px;
+  font-weight: bold;
+  color: $text-color;
+  text-align: center;
+}
+
+@mixin base-h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: $text-color;
+  border-left: solid 10px $icon-color ;
+  padding-left: 10px;
+}
+
+@mixin base-p {
+  font-size: 20px;
+  color: $text-color;
+  padding-top: 10px;
+}
+
+@mixin section-block{
+  &-img, &-contents1, &-contents2 {
+    width: calc(100%/3);
+    height: 100vh;
+    text-align: center;
+  }
+
+  &-img {
+    img {
+      width: 80%;
+      height: auto;
+      margin-top: 40px;
+    }
+  }
+
+  &-contents1, &-contents2 {
+    background-color: #FFFFFF;
+    section{
+      width: 100%;
+      padding: 50px;
+      
+      p {
+        text-decoration: underline;
+        font-weight: bold;
+        padding-top: 20px;
+      }
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

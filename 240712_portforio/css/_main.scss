@@ -1,0 +1,51 @@
+#main {
+  
+    #about{
+      @include base-block();
+      .about {
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 50px;
+        column-gap: 10px;
+  
+        @include section-block();
+      }
+    }
+  
+    #service{
+      @include base-block();
+      .service {
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 50px;
+        column-gap: 10px;
+  
+        @include section-block();
+      }
+    }
+  
+    #works{
+      @include base-block();
+      .works {
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 50px;
+        column-gap: 10px;
+  
+        @include section-block();
+      }
+    }
+  
+    #works-slider1, #works-slider2 {
+      @include base-block();
+      .works-slider {
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 50px;
+        column-gap: 10px;
+        img {
+          width: 50%;
+        }
+      }
+    }
+}

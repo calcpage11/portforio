@@ -1,0 +1,44 @@
+header {
+  #header {
+    height: 100vh;
+    .header {
+      @include base-block($top: 0px,$blanklr: 0px);
+      background-color: #FFFFFF;
+        &-contents {
+        display: flex;
+        justify-content: space-between;
+        &-left {
+          position: relative;
+          width: 50%;
+          height: auto;
+        }
+        &-right {
+          position: relative;
+          width: 50%;
+          height: auto;
+          &-nav {
+            display: flex;
+            justify-content: space-between;
+            a {
+              color: $text-color;  
+              font-size: $text-size;
+            }
+          }
+        }
+      }
+    }
+    .header-slider {
+      @include base-block($top: 0px,$blanklr: 0px);
+      background-color: #FFFFFF;
+      &-swiper {
+        &-slide {
+          img {
+            width: 100%;
+            height: auto;
+          }      
+        }
+        }
+    }
+
+  }
+}

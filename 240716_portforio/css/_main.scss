@@ -1,0 +1,57 @@
+#main {
+  #about ,#service ,#works {
+    @include base-block();
+    height: 100vh;
+  }
+
+  .about ,.service ,.works {
+    display: flex;
+    column-gap: 10px; 
+
+    &-titleimg, &-contents1, &-contents2 {
+      width: calc(100%/3);
+      height: auto;
+      text-align: center;
+    }
+  
+    &-titleimg {
+      img {
+        width: 90%;
+        height: auto;
+        margin-top: 40px;
+      }
+    }
+  
+    &-contents1, &-contents2 {
+      background-color: #FFFFFF;
+      section{
+        width: 100%;
+        height: auto;
+        padding: 50px;
+        
+        p {
+          text-decoration: underline;
+          font-weight: bold;
+          padding-top: 20px;
+        }
+  
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }    
+}
+    
+#works-slider1, #works-slider2 {
+  @include base-block();
+  .works-slider {
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    column-gap: 10px;
+    img {
+      width: 50%;
+    }
+  }
+}

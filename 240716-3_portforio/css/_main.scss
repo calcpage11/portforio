@@ -1,0 +1,91 @@
+#main {
+  #about ,#service ,#works {
+    @include base-block();
+    height: 100vh;
+  }
+
+  .about ,.service ,.works {
+    display: flex;
+    column-gap: 10px; 
+    height: calc(100vh - 220px);
+
+    &-titleimg, &-contents1, &-contents2 {
+      width: calc(100% / 3);
+      text-align: center;
+    }
+  
+    &-titleimg {
+      position: relative;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 90%;
+        height: auto;
+      }
+    }
+  
+    &-contents1, &-contents2 {
+      background-color: #FFFFFF;
+      section{
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        text-align: left;
+        
+        p {
+          text-decoration: underline;
+          font-weight: bold;
+          padding-top: 20px;
+        }
+
+        span {
+          display: block;
+          padding-top: 10px;
+          line-height: 20px;
+        }
+ 
+      }
+    }
+  }
+
+  #works-slider1 ,#works-slider2 {
+    @include base-block();
+    height: 100vh;
+  }
+
+  .works-slider1 ,.works-slider2 {
+    h3 {
+      margin-bottom: 30px;
+    }
+    &-swiper {
+      &-slide {
+        img {
+          width: calc(100% / 3);
+          height: auto;
+        }      
+      }
+    }
+  }
+
+  #contact {
+    @include base-block();
+    height: 100vh;
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      &-left {
+        position: relative;
+        width: 50%;
+        height: auto;
+      }
+      &-right {
+        position: relative;
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+}

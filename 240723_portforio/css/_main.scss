@@ -1,0 +1,152 @@
+#main {
+  #about ,#service ,#works {
+    @include base-block();
+    height: auto;
+    padding: 20px;
+  }
+
+  .about ,.service ,.works {
+    display: flex;
+    column-gap: 10px; 
+
+    &-titleimg, &-contents1, &-contents2 {
+      width: calc(100% / 3);
+      text-align: center;
+    }
+  
+    &-titleimg {
+      img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 20px;
+      }
+    }
+  
+    &-contents1, &-contents2 {
+      background-color: #FFFFFF;
+      section{
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        text-align: left;
+        @include base-hide-text();
+        p {
+          text-decoration: underline;
+          font-weight: bold;
+          padding-top: 1em;
+        }
+
+        span {
+          display: block;
+          padding-top: 10px;
+          line-height: 20px;
+          padding-bottom: 10px
+        }
+ 
+      }
+    }
+  }
+
+  #works-slider1 ,#works-slider2 {
+    @include base-block();
+    height: 100vh;
+  }
+
+  .works-slider1 ,.works-slider2 {
+    h3 {
+      margin-bottom: 30px;
+    }
+    &-swiper {
+      &-slide {
+        background-color: #FFFFFF;
+        img {
+          width: calc(100% / 3);
+          height: auto;
+          padding: 10px;
+        }      
+      }
+    }
+  }
+
+  #contact {
+    @include base-block();
+    background-color: rgba(250,250,210,0.50);
+    height: 100vh;
+    .contact {
+      &-title {
+        h2 {
+          text-align: left;
+        }
+      }
+      &-input {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        &-left {
+          position: relative;
+          width: 50%;
+          height: auto;
+          &-name ,&-mail ,&-tel {
+            padding: 10px;
+            label {
+              font-weight: bold;
+            }
+            input {
+              border: solid 1px $text-color;
+              border-radius: 2px;
+              box-shadow: 5px 5px 5px $gray-color;
+              background-color: #FFFFFF;
+              padding: 10px;
+              margin-top: 5px;
+              width: 90%;
+              height: auto;
+            }
+          }
+        }
+        &-right {
+          position: relative;
+          width: 50%;
+          height: auto;
+          &-message {
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+            label {
+              font-weight: bold;
+            }
+            textarea {
+              border: solid 1px $text-color;
+              border-radius: 2px;
+              box-shadow: 5px 5px 5px $gray-color;
+              background-color: #FFFFFF;
+              padding: 10px;
+              margin-top: 5px;
+              width: 90%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      &-submit {
+        margin-top: 20px;
+        &-button {
+          display: block;
+          text-align: center;
+          input {
+            border: solid 1px $text-color;
+            border-radius: 2px;
+            box-shadow: 5px 5px 5px $gray-color;
+            background-color: #FFFFFF;
+            padding: 10px;
+            margin-top: 10px;
+            width: 25%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

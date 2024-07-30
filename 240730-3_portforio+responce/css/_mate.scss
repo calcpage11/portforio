@@ -1,0 +1,95 @@
+$text-color: rgba(107,62,50);
+$back-color: rgba(95,158,160,0.30);
+$btun-color: rgba(95,158,160,0.10);
+$icon-color: rgba(95,158,160);
+$gray-color: gray;
+$text-size: clamp(18px, 2.4vw, 26px);
+
+@mixin base-block($top: 200px,$blanklr: 50px) {
+  background-color: $back-color;
+  margin-top: $top;
+  padding-top: 50px;
+  padding-left: $blanklr;
+  padding-right: $blanklr;
+  position: relative;
+}
+
+@mixin base-hr {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: $icon-color;
+}
+
+@mixin base-h2 {
+  font-size: clamp(30px, 6.0vw, 65px);
+  font-weight: bold;
+  color: $text-color;
+  text-align: center;
+}
+
+@mixin base-h3 {
+  font-size: clamp(14px, 2.8vw, 30px);
+  font-weight: bold;
+  color: $text-color;
+  border-left: solid 10px $icon-color ;
+  padding-left: 10px;
+  text-align: left;
+}
+
+@mixin base-p {
+  font-size: clamp(10px, 1.9vw, 20px);
+  color: $text-color;
+}
+
+@mixin base-span {
+  font-size: clamp(8px, 1.7vw, 18px);
+  color: $text-color;
+}
+
+@mixin base-label {
+  font-size: clamp(10px, 1.9vw, 20px);
+  color: $text-color;
+}
+
+.js-fadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s, transform .8s;
+}
+
+.js-fadeUp.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .5s;
+}
+
+@mixin base-hide-text {
+  .readmore {
+    position: relative;
+    margin: 0 0 0 auto;
+    display: block;
+    color: #666;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    background: none;
+    letter-spacing: 0.1em;
+    span {
+      background-color: $btun-color;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+  .readmore .open {
+    display: block;
+  }
+  .readmore.on-click .open {
+    display: none;
+  }
+  .readmore .close {
+    display: none;
+  }
+  .readmore.on-click .close {
+    display: block;
+  }
+}
